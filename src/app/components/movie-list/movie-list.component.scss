@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1a242e;
+  color: #fff;
+  height: 3vh;
+  padding: 20px;
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    a {
+      font-size: 18px;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+.img-content {
+  width: 100%;
+}
