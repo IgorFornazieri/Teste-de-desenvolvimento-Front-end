@@ -4,11 +4,16 @@
       <h1>Lista de filmes</h1>
       <a>Início</a>
     </div>
-    <input type="search">
   </header>
 
-  <div class="img-content">
-    <img
-      src="https://upload.wikimedia.org/wikipedia/pt/thumb/9/90/Avengers_Infinity_War.jpg/250px-Avengers_Infinity_War.jpg">
+  <div class="moviesList">
+    <div *ngFor="let movies of moviesList" class="img-container">
+      <img [src]="movies.poster" [routerLink]="['/movieTrailer', movies?.nome]">
+      <h2>{{movies?.nome}}</h2>
+      <p>Diretor: {{movies?.diretor}}</p>
+      <p>Ano: {{movies?.ano}}</p>
+      <p>Gênero: {{movies?.genero}}</p>
+      <p>{{movies?.descricao}}</p>
+    </div>
   </div>
 </section>
